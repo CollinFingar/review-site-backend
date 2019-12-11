@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/gamegenres",
+      "handler": "Gamegenre.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gamegenres/count",
+      "handler": "Gamegenre.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gamegenres/:id",
+      "handler": "Gamegenre.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/gamegenres",
+      "handler": "Gamegenre.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/gamegenres/:id",
+      "handler": "Gamegenre.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/gamegenres/:id",
+      "handler": "Gamegenre.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

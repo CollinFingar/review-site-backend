@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "gameplatforms",
+  "info": {
+    "name": "gameplatform",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "games": {
+      "collection": "game",
+      "via": "gameplatforms",
+      "dominant": true
+    }
+  }
+}

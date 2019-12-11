@@ -1,0 +1,50 @@
+{
+  "connection": "default",
+  "collectionName": "games",
+  "info": {
+    "name": "game",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "required": true,
+      "type": "string"
+    },
+    "release_date": {
+      "type": "date"
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "gamegenres": {
+      "collection": "gamegenre",
+      "via": "games"
+    },
+    "publisher": {
+      "model": "publisher",
+      "via": "games"
+    },
+    "developer": {
+      "model": "developer",
+      "via": "games"
+    },
+    "gameplatforms": {
+      "collection": "gameplatform",
+      "via": "games"
+    },
+    "gamereviews": {
+      "collection": "gamereview",
+      "via": "game"
+    }
+  }
+}

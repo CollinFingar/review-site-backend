@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/gamereviews",
+      "handler": "Gamereview.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gamereviews/count",
+      "handler": "Gamereview.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gamereviews/:id",
+      "handler": "Gamereview.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/gamereviews",
+      "handler": "Gamereview.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/gamereviews/:id",
+      "handler": "Gamereview.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/gamereviews/:id",
+      "handler": "Gamereview.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
