@@ -1,0 +1,56 @@
+{
+  "connection": "default",
+  "collectionName": "gamereviews",
+  "info": {
+    "name": "gamereview",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "author": {
+      "model": "author"
+    },
+    "title": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "subtitle": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "score": {
+      "type": "decimal",
+      "required": true
+    },
+    "ups": {
+      "default": "up1.@up2.@up3.",
+      "type": "text"
+    },
+    "downs": {
+      "default": "down1.@down2.@down3.",
+      "type": "text"
+    },
+    "game": {
+      "model": "game",
+      "via": "gamereviews"
+    },
+    "review_body": {
+      "required": true,
+      "type": "richtext"
+    },
+    "review_images": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "gamegenres",
+  "info": {
+    "name": "gamegenre",
+    "description": "Game Genre"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "games": {
+      "collection": "game",
+      "via": "gamegenres",
+      "dominant": true
+    }
+  }
+}
