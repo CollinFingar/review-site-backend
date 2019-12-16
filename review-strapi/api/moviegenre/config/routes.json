@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/moviegenres",
+      "handler": "Moviegenre.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/moviegenres/count",
+      "handler": "Moviegenre.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/moviegenres/:id",
+      "handler": "Moviegenre.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/moviegenres",
+      "handler": "Moviegenre.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/moviegenres/:id",
+      "handler": "Moviegenre.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/moviegenres/:id",
+      "handler": "Moviegenre.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
