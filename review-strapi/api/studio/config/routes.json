@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/studios",
+      "handler": "Studio.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/studios/count",
+      "handler": "Studio.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/studios/:id",
+      "handler": "Studio.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/studios",
+      "handler": "Studio.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/studios/:id",
+      "handler": "Studio.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/studios/:id",
+      "handler": "Studio.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

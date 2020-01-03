@@ -12,8 +12,9 @@
   },
   "attributes": {
     "name": {
-      "unique": true,
       "required": true,
+      "unique": true,
+      "default": "",
       "type": "string"
     },
     "games": {

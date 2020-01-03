@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "moviegenres",
+  "collectionName": "Show Genres",
   "info": {
-    "name": "moviegenre",
+    "name": "showgenre",
     "description": ""
   },
   "options": {
@@ -16,9 +16,10 @@
       "required": true,
       "type": "string"
     },
-    "movies": {
-      "collection": "movie",
-      "via": "moviegenres"
+    "shows": {
+      "collection": "show",
+      "via": "showgenres",
+      "dominant": true
     }
   }
 }

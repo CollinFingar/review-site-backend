@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "movies",
+  "info": {
+    "name": "movie",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "moviegenres": {
+      "collection": "moviegenre",
+      "via": "movies",
+      "dominant": true
+    },
+    "premiere_date": {
+      "type": "date"
+    },
+    "studio": {
+      "model": "studio",
+      "via": "movies"
+    },
+    "reviews": {
+      "collection": "review",
+      "via": "movie"
+    }
+  }
+}
