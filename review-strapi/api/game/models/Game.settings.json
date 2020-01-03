@@ -42,8 +42,8 @@
       "collection": "gameplatform",
       "via": "games"
     },
-    "gamereviews": {
-      "collection": "gamereview",
+    "reviews": {
+      "collection": "review",
       "via": "game"
     }
   }

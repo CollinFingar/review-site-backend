@@ -34,6 +34,10 @@
       "unique": true,
       "required": true,
       "type": "string"
+    },
+    "reviews": {
+      "collection": "review",
+      "via": "author"
     }
   }
 }

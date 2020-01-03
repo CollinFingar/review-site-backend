@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `Gamereview` model.
+ * Lifecycle callbacks for the `Studio` model.
  */
 
 module.exports = {

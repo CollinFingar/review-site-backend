@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/gamereviews",
-      "handler": "Gamereview.find",
+      "path": "/showgenres",
+      "handler": "Showgenre.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/gamereviews/count",
-      "handler": "Gamereview.count",
+      "path": "/showgenres/count",
+      "handler": "Showgenre.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/gamereviews/:id",
-      "handler": "Gamereview.findOne",
+      "path": "/showgenres/:id",
+      "handler": "Showgenre.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/gamereviews",
-      "handler": "Gamereview.create",
+      "path": "/showgenres",
+      "handler": "Showgenre.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/gamereviews/:id",
-      "handler": "Gamereview.update",
+      "path": "/showgenres/:id",
+      "handler": "Showgenre.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/gamereviews/:id",
-      "handler": "Gamereview.delete",
+      "path": "/showgenres/:id",
+      "handler": "Showgenre.delete",
       "config": {
         "policies": []
       }

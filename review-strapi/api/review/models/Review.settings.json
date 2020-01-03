@@ -1,0 +1,71 @@
+{
+  "connection": "default",
+  "collectionName": "reviews",
+  "info": {
+    "name": "review",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "author": {
+      "model": "author",
+      "via": "reviews"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "body": {
+      "required": true,
+      "type": "richtext"
+    },
+    "body_images": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "cover_image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "Score": {
+      "type": "decimal",
+      "required": true
+    },
+    "Ups": {
+      "default": "Up1.\nUp2.\nUp3.",
+      "type": "text"
+    },
+    "Downs": {
+      "default": "Down1.\nDown2.\nDown3.",
+      "type": "text"
+    },
+    "Featured": {
+      "required": true,
+      "type": "boolean"
+    },
+    "game": {
+      "model": "game",
+      "via": "reviews"
+    },
+    "movie": {
+      "model": "movie",
+      "via": "reviews"
+    },
+    "show": {
+      "model": "show",
+      "via": "reviews"
+    }
+  }
+}
