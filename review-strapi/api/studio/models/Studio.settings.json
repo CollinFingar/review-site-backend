@@ -1,32 +1,28 @@
 {
   "connection": "default",
-  "collectionName": "moviegenres",
+  "collectionName": "studios",
   "info": {
-    "name": "moviegenre",
+    "name": "studio",
     "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": [
-      "created_at",
-      "updated_at"
-    ],
+    "timestamps": true,
     "comment": ""
   },
   "attributes": {
     "name": {
-      "unique": true,
       "required": true,
+      "unique": true,
       "type": "string"
     },
     "movies": {
       "collection": "movie",
-      "dominant": true,
-      "via": "moviegenres"
+      "via": "studio"
     },
     "shows": {
       "collection": "show",
-      "via": "moviegenres"
+      "via": "studio"
     }
   }
 }

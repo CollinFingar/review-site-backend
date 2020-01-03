@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "authors",
+  "collectionName": "shows",
   "info": {
-    "name": "author",
+    "name": "show",
     "description": ""
   },
   "options": {
@@ -19,25 +19,25 @@
       "required": true,
       "type": "string"
     },
-    "description": {
-      "unique": true,
-      "required": true,
-      "type": "text"
+    "studio": {
+      "model": "studio",
+      "via": "shows"
     },
-    "prof_pic": {
-      "model": "file",
-      "via": "related",
-      "plugin": "upload",
-      "required": true
-    },
-    "color_hex": {
-      "unique": true,
-      "required": true,
-      "type": "string"
+    "premiere": {
+      "type": "date"
     },
     "reviews": {
       "collection": "review",
-      "via": "author"
+      "via": "show"
+    },
+    "movieplatforms": {
+      "collection": "movieplatform",
+      "via": "shows"
+    },
+    "moviegenres": {
+      "collection": "moviegenre",
+      "via": "shows",
+      "dominant": true
     }
   }
 }

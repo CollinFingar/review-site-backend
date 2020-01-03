@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "gamereviews",
+  "collectionName": "reviews",
   "info": {
-    "name": "gamereview",
+    "name": "review",
     "description": ""
   },
   "options": {
@@ -14,43 +14,55 @@
     "comment": ""
   },
   "attributes": {
-    "author": {
-      "model": "author"
-    },
     "title": {
       "unique": true,
+      "default": "",
       "required": true,
       "type": "string"
     },
     "subtitle": {
-      "unique": true,
       "required": true,
       "type": "string"
+    },
+    "author": {
+      "model": "author",
+      "via": "reviews"
+    },
+    "body": {
+      "type": "richtext"
     },
     "score": {
       "type": "decimal",
       "required": true
     },
     "ups": {
-      "default": "up1.@up2.@up3.",
+      "default": "up1.\nup2.\nup3.",
       "type": "text"
     },
     "downs": {
-      "default": "down1.@down2.@down3.",
+      "default": "down1.\ndown2.",
+      "required": true,
       "type": "text"
     },
     "game": {
       "model": "game",
-      "via": "gamereviews"
+      "via": "reviews"
     },
-    "review_body": {
-      "required": true,
-      "type": "richtext"
-    },
-    "review_images": {
-      "collection": "file",
+    "cover": {
+      "model": "file",
       "via": "related",
       "plugin": "upload"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "movie": {
+      "model": "movie",
+      "via": "reviews"
+    },
+    "show": {
+      "model": "show",
+      "via": "reviews"
     }
   }
 }

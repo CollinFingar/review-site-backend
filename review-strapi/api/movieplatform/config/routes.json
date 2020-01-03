@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/gamereviews",
-      "handler": "Gamereview.find",
+      "path": "/movieplatforms",
+      "handler": "Movieplatform.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/gamereviews/count",
-      "handler": "Gamereview.count",
+      "path": "/movieplatforms/count",
+      "handler": "Movieplatform.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/gamereviews/:id",
-      "handler": "Gamereview.findOne",
+      "path": "/movieplatforms/:id",
+      "handler": "Movieplatform.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/gamereviews",
-      "handler": "Gamereview.create",
+      "path": "/movieplatforms",
+      "handler": "Movieplatform.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/gamereviews/:id",
-      "handler": "Gamereview.update",
+      "path": "/movieplatforms/:id",
+      "handler": "Movieplatform.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/gamereviews/:id",
-      "handler": "Gamereview.delete",
+      "path": "/movieplatforms/:id",
+      "handler": "Movieplatform.delete",
       "config": {
         "policies": []
       }

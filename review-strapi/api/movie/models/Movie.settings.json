@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "games",
+  "collectionName": "movies",
   "info": {
-    "name": "game",
+    "name": "movie",
     "description": ""
   },
   "options": {
@@ -15,36 +15,33 @@
   },
   "attributes": {
     "name": {
+      "unique": true,
       "required": true,
       "type": "string"
     },
-    "release_date": {
+    "premiere": {
       "type": "date"
+    },
+    "studio": {
+      "model": "studio",
+      "via": "movies"
+    },
+    "moviegenres": {
+      "collection": "moviegenre",
+      "via": "movies"
     },
     "cover": {
       "model": "file",
       "via": "related",
       "plugin": "upload"
     },
-    "gamegenres": {
-      "collection": "gamegenre",
-      "via": "games"
-    },
-    "publisher": {
-      "model": "publisher",
-      "via": "games"
-    },
-    "developer": {
-      "model": "developer",
-      "via": "games"
-    },
-    "gameplatforms": {
-      "collection": "gameplatform",
-      "via": "games"
-    },
     "reviews": {
       "collection": "review",
-      "via": "game"
+      "via": "movie"
+    },
+    "movieplatforms": {
+      "collection": "movieplatform",
+      "via": "movies"
     }
   }
 }
